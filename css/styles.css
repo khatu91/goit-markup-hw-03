@@ -1,9 +1,52 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+ul {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+img {
+  display: block;
+}
+
 .main-content {
   font-family: 'Roboto', sans-serif;
   color: #434455;
   background-color: #ffffff;
 }
+
+.container {
+  max-width: 1158px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: 141px;
+  margin-right: 141px;
+}
+.section {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
 /* Header */
+.header {
+  border-bottom: 1px solid #e7e9fc;
+}
+.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navigation {
+  display: flex;
+  align-items: center;
+}
 .logo {
   color: #4d5ae5;
   font-family: Raleway, sans-serif;
@@ -18,9 +61,20 @@
   color: #2e2f42;
 }
 .header-list {
+  margin-left: 76px;
+  display: flex;
   list-style-type: none;
+  gap: 40px;
 }
+/* .header-list-item:not(:last-child) {
+  margin-right: 40px;
+} */
+
 .header-list-item-link {
+  display: block;
+  padding-top: 24px;
+  padding-bottom: 24px;
+
   color: #2e2f42;
   font-size: 16px;
   font-weight: 500;
@@ -35,12 +89,19 @@
 .header-list-item-link:active {
   color: #404bbf;
 }
+/* Address */
 .contacts {
   font-style: normal;
 }
 .contacts-list {
+  display: flex;
   list-style-type: none;
+  gap: 40px;
 }
+/* .contacts-list-item:not(:last-child) {
+  margin-right: 40px;
+} */
+
 .contacts-list-item-link {
   color: #434455;
   font-size: 16px;
@@ -55,17 +116,22 @@
 }
 /* Hero */
 .hero {
+  text-align: center;
   background: #2e2f42;
 }
 .hero-title {
+  margin: 0 auto 48px auto;
+  width: 496px;
   color: #fff;
-  text-align: center;
   font-size: 56px;
   font-weight: 700;
   line-height: 1.07;
   letter-spacing: 1.12px;
 }
 .button {
+  border-radius: 4px;
+  padding: 16px 32px;
+
   font-family: 'Roboto', sans-serif;
   color: #fff;
   font-size: 16px;
@@ -80,10 +146,31 @@
   background-color: #404bbf;
 }
 /* Our advantages */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 .advantages-list {
   list-style-type: none;
+  display: flex;
+  gap: 24px;
 }
+.advantages-list-item {
+  width: calc(1128px-72px / 4);
+}
+/* .advantages-list-item:not(:last-child) {
+  margin-right: 24px;
+} */
 .advantages-title {
+  margin-bottom: 8px;
   color: #2e2f42;
   font-size: 20px;
   font-weight: 500;
@@ -101,6 +188,7 @@
   background: #f4f4fd;
 }
 .team-title {
+  margin-bottom: 72px;
   color: #2e2f42;
   text-align: center;
   font-size: 36px;
@@ -110,12 +198,21 @@
   text-transform: capitalize;
 }
 .team-list {
+  display: flex;
   list-style-type: none;
+  gap: 24px;
 }
 .team-item {
+  width: calc(1158px-72px / 4);
   background-color: #ffffff;
 }
+/* .team-item:not(:last-child) {
+  margin-right: 24px;
+} */
 .team-member {
+  margin-top: 32px;
+  text-align: center;
+  margin-bottom: 8px;
   color: #2e2f42;
   font-size: 20px;
   font-weight: 500;
@@ -123,6 +220,8 @@
   letter-spacing: 0.4px;
 }
 .team-profession {
+  padding-bottom: 32px;
+  text-align: center;
   font-size: 16px;
   font-weight: 400;
   line-height: 1.5;
@@ -130,6 +229,7 @@
 }
 /* Our Portfolio */
 .portfolio-title {
+  margin-bottom: 72px;
   color: #2e2f42;
   text-align: center;
   font-size: 36px;
@@ -138,10 +238,28 @@
   letter-spacing: 0.72px;
   text-transform: capitalize;
 }
+
 .portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
   list-style-type: none;
+  gap: 24px;
 }
+.portfolio-list-item {
+  width: calc(1158px-48px / 3);
+  /* margin-right: 24px; */
+}
+/* .portfolio-list-item:nth-child(3n) {
+  margin-right: 0;
+} */
 .portfolio-title-img {
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 32px;
+  padding-bottom: 8px;
+  border-left: 1px solid #e7e9fc;
+  border-right: 1px solid #e7e9fc;
+
   color: #2e2f42;
   font-size: 20px;
   font-weight: 500;
@@ -149,6 +267,12 @@
   letter-spacing: 0.4px;
 }
 .portfolio-text-img {
+  padding: 0 16px;
+  padding-bottom: 32px;
+  border-left: 1px solid #e7e9fc;
+  border-right: 1px solid #e7e9fc;
+  border-bottom: 1px solid #e7e9fc;
+
   font-size: 16px;
   font-weight: 400;
   line-height: 1.5;
@@ -158,10 +282,16 @@
 .footer {
   background: #2e2f42;
 }
+.footer-conteiner {
+  padding-bottom: 100px;
+  padding-top: 100px;
+}
 .footer-accent {
   color: #f4f4fd;
 }
 .footer-text {
+  margin-top: 16px;
+  width: 264px;
   color: #f4f4fd;
   font-size: 16px;
   font-weight: 400;
